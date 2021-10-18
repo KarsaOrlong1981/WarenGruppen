@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="CornflowerBlue" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WarenGruppen" x:DataType="local:ItemProperties" 
+             x:Class="WarenGruppen.CompleteListPage">
+    <ScrollView >
+
+
+        <Grid x:Name="grid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Nummer" TextColor="White" FontSize="Small"  HorizontalOptions="CenterAndExpand" />
+                <Label Grid.Column="1" Text="Bezeichnung" TextColor="White" FontSize="Small" HorizontalOptions="CenterAndExpand" />
+                <Label Grid.Column="2" Text="Warengruppe" TextColor="White" FontSize="Small" HorizontalOptions="CenterAndExpand" />
+            </Grid>
+
+            
+            <CollectionView x:Name="collectionView"
+                            Grid.Row="1" 
+                            HorizontalOptions="CenterAndExpand" 
+                            Margin="10"
+                            
+                         
+                            >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame HasShadow="True" 
+                           BorderColor="LightGray" 
+                           Margin="10" 
+                           CornerRadius="20" 
+                           BackgroundColor="CornflowerBlue"   
+                               HorizontalOptions="CenterAndExpand" >
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions >
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                              
+                            
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding ItemNumber}"
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="StartAndExpand"
+                                       FontSize="Small"  TextColor="White" />
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Item}"
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="StartAndExpand"
+                                       HorizontalTextAlignment="Center" 
+                                       FontSize="Small"  TextColor="White" />
+                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding ItemGroup}"
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="StartAndExpand"
+                                       FontSize="Small"  TextColor="Yellow"    />
+
+                            </Grid>
+
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="CornflowerBlue"  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WarenGruppen.CorrectAnswerPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" x:Name="lab_Question" TextColor="White" FontSize="30" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Entry Grid.Row="2" x:Name="entryAnswer" Placeholder="Artikel Nr." PlaceholderColor="Orange" HorizontalOptions="CenterAndExpand" WidthRequest="100" VerticalOptions="CenterAndExpand" Keyboard="Numeric" BackgroundColor="SteelBlue" TextColor="White"
+               Completed="EntryAnswer_Completed"  />
+        <Button Grid.Row="3" Text="Verlassen" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="btn_NewGroup" BorderColor="AliceBlue" BackgroundColor="SteelBlue" 
+                TextColor="White" FontSize="20" BorderWidth="3" Clicked="btn_NewGroup_Clicked" />
+    </Grid>
+</ContentPage>

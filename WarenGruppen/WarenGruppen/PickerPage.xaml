@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="CornflowerBlue" Padding="20" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="WarenGruppen.PickerPage">
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+       
+     
+        <Frame x:Name="frame" HasShadow="True" Grid.Row="4" CornerRadius="20" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BackgroundColor="SteelBlue">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Warengruppe 1: 64 Einträge" BackgroundColor="SteelBlue" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
+                <Label Grid.Row="1" Text="Warengruppe 2: 1 Eintrag" BackgroundColor="SteelBlue" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
+                <Label Grid.Row="2" Text="Warengruppe 3: 8 Einträge" BackgroundColor="SteelBlue" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
+                <Label Grid.Row="3" Text="Warengruppe 4: 40 Einträge" BackgroundColor="SteelBlue" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
+                <Label Grid.Row="4" Text="Warengruppe 5: 34 Einträge" BackgroundColor="SteelBlue" TextColor="White" FontSize="13" HorizontalOptions="CenterAndExpand" />
+            </Grid>
+        </Frame>
+        <Label Grid.Row="1" x:Name="lab_ChooseGroup" Text="Wähle eine Warengruppe von 1-25" TextColor="White" FontSize="20" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"
+               />
+        <Entry Grid.Row="2" x:Name="entryGroup" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  WidthRequest="50" VerticalOptions="StartAndExpand" Keyboard="Numeric" BackgroundColor="CornflowerBlue"  TextColor="White"
+               Completed="entryGroup_Completed" />
+        
+        <Label Grid.Row="1" x:Name="lab_Question" TextColor="White" FontSize="30" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="false"/>
+        <Entry Grid.Row="2" x:Name="entryAnswer" Placeholder="Artikel Nr." HorizontalTextAlignment="Center" PlaceholderColor="Orange" HorizontalOptions="CenterAndExpand" WidthRequest="100" VerticalOptions="CenterAndExpand"  Keyboard="Numeric" BackgroundColor="CornflowerBlue"  TextColor="White"
+               Completed="entryAnswer_Completed" IsVisible="false"  />
+        <Button Grid.Row="3" Text="Verlassen" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="btn_NewGroup" BorderColor="AliceBlue" BackgroundColor="SteelBlue" 
+                TextColor="White" FontSize="20" BorderWidth="3" Clicked="btn_NewGroup_Clicked" IsVisible="false" />
+ 
+    </Grid>
+</ContentPage>

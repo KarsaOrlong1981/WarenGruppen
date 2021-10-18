@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="40" BackgroundColor="CornflowerBlue"            xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WarenGruppen.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="Gray"   Grid.Row="0"
+               HasShadow="True" CornerRadius="20">
+            <Button x:Name="btn_GroupSelect" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Text="Gruppe wählen" TextColor="White" FontSize="20" Clicked="btn_GroupSelect_Clicked"/>
+        </Frame>
+        <Frame BackgroundColor="Gray" Grid.Row="1"
+                HasShadow="True" CornerRadius="20">
+            <Button x:Name="btn_Correct" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Text="Richtige Antworten" TextColor="White" FontSize="20" Clicked="btn_GroupRandom_Clicked" />
+           
+        </Frame>
+        <Frame BackgroundColor="Gray" Grid.Row="2"
+               HasShadow="True" CornerRadius="20">
+            <Button x:Name="btn_Uncorrect" BackgroundColor="Gray"  HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Text="Falsche Antworten" TextColor="White" FontSize="20" Clicked="btn_Uncorrect_Clicked"  />
+        </Frame>
+        <Frame BackgroundColor="Gray" Grid.Row="3"
+               HasShadow="True" CornerRadius="20">
+            <Button x:Name="btn_List" BackgroundColor="Gray"  HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Text="Komplette Liste" TextColor="White" FontSize="20" Clicked="btn_List_Clicked"   />
+        </Frame>
+    </Grid>
+
+</ContentPage>
